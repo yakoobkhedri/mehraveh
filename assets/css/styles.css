@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "YekanBakh-Regular";
-    src: url('../fonts/YekanBakhFaNum-Regular.woff') format("woff");
+    font-family: "Pelak-Regular";
+    src: url('../fonts/WebFonts/WOFF/Pelak-Regular.woff') format("woff");
 }
 @font-face {
-    font-family: "YekanBakh-Bold";
-    src: url('../fonts/YekanBakhFaNum-Bold.woff') format("woff");
+    font-family: "Pelak-Bold";
+    src: url('../fonts/WebFonts/WOFF/Pelak-Bold.woff') format("woff");
 }
 /*  */
 html {
@@ -12,14 +12,14 @@ html {
 }
 
 body {
-    font-family: "YekanBakh-Regular";
+    font-family: "Pelak-Regular";
     user-select: none;
     overflow-x: hidden;
     background-color: #F5F5F7;
 }
 
 .font-bold {
-    font-family: "YekanBakh-Bold";
+    font-family: "Pelak-Bold";
 }
 
 a {
