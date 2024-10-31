@@ -999,4 +999,13 @@ header nav ul li:hover a,header nav ul li.active a{
       .bg-main-gradient-after::after {
         height: 144px;
       }
+      .bg-sm-white{
+        background-color: white!important;
+      }
+}
+
+@media only screen and (max-width:420px) {
+     .w-xs-100{
+       width: 100%;
+     }
 }
