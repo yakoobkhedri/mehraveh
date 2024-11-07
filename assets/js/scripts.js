@@ -14,7 +14,7 @@ var banner = new Swiper(".banner", {
 });
 var portfolio = new Swiper(".portfolio", {
   slidesPerView: 2,
-  spaceBetween: 15,
+  spaceBetween: 25,
   autoplay: true,
   breakpoints: {
     576: {
@@ -22,10 +22,11 @@ var portfolio = new Swiper(".portfolio", {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 25,
+      spaceBetween: 35,
     },
     992: {
       slidesPerView: 4,
+      spaceBetween: 55,
     },
     1200: {
       slidesPerView: 5,
