@@ -766,7 +766,21 @@ header nav ul li:hover a,header nav ul li.active a{
   transform: scale(1.05);
   filter: contrast(100%);
 }
-
+/* blog */
+.h-184{
+    height: 184px;
+}
+.dashed{
+    height:1px;
+    width: 100%;
+    border-bottom: 4px dashed #25252540;
+}
+.border-b-dashed-2{
+    border-bottom: 2px dashed #25252540;
+}
+.shadow-13{
+    box-shadow: 0px 5px 21.7px -6px #2525252E;
+}
 @media only screen and (max-width:992px) {
     
    .bg-lg-transparent{
@@ -781,6 +795,11 @@ header nav ul li:hover a,header nav ul li.active a{
     .mt-lg-6{
         margin-top: 6px;
     }
+    /* blog */
+    .w-lg-100{
+        width: 100%!important;
+    }
+    /*  */
     .w-lg-101{
         width: 101px!important;
     }

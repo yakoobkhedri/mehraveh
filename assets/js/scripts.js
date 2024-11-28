@@ -79,17 +79,19 @@ var customers = new Swiper(".customers", {
     },
   }
 });
-
-// auto active button
-
-let currentIndex= 0;
-let buttons= document.querySelectorAll('.button');
-
-let changeActiveElement= setInterval(()=>{
-  buttons.forEach((el)=>{
-    el.classList.remove('active-red');
-  });
-  buttons[currentIndex].classList.add('active-red');
-  currentIndex+=1;
-  if(currentIndex >=buttons.length) currentIndex = 0;
-},1500)
+var relatedBlog = new Swiper(".relatedBlog", {
+  slidesPerView: 1,
+  spaceBetween: 25,
+  autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  }
+});
