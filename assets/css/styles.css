@@ -696,14 +696,14 @@ input[type="number"] {
     background-color: #EF4B4B;
 }
 /* pagination */
-.paginationSection a:hover{
+.paginationSection a:hover,.paginationSection a.active{
     background-color: #0DC167!important;
     color: white!important;
 }
 .paginationSection a svg path{
     transition: all .4s;
 }
-.paginationSection a:hover svg path{
+.paginationSection a:hover svg path,.paginationSection a.active svg path{
     fill: white!important;
 }
 /* accordion */
