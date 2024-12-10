@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>فرم ثبت سفارش</title>
+</head>
+
+<body>
+
+  <!-- menu -->
+  <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <!-- shape -->
+     <div class="position-absolute rounded-circle border-7-gray w-140 h-140 -top-76 -right-35"></div>
+     <div class="position-absolute rounded-circle border-7-gray w-140 h-140 -top-30 -right-77"></div>
+     <div class="position-absolute rounded-circle border-7-gray w-140 h-140 -bottom-76 -left-35"></div>
+     <div class="position-absolute rounded-circle border-7-gray w-140 h-140 -bottom-30 -left-77"></div>
+    <!--  -->
+    <div class="offcanvas-body py-5 px-4 position-relative">
+      <a class="d-block"><img alt="logo" src="assets/img/Logo.png" class="d-block mx-auto w-124 img-fluid"></a>
+      <p class="fs-14 font-bold text-center mb-0 d-none">محمدرضا وهاب زاده</p>
+      <ul class="mt-5 list-unstyled pe-0 mb-0">
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector.png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">صفحه اصلی</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (2).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">محصولات</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (3).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">لیست قیمت</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (4).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">طراحی</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (5).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">وبلاگ</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (6).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">درباره ما</p>
+        </a>
+       </li>
+       <li>
+        <a class="d-flex align-items-center gap-3 py-3 border-bottom text-dark">
+          <img alt="icon" src="assets/img/Vector (7).png" class="flex-shrink-0">
+          <p class="mb-0 fs-12 font-bold">سبد خرید</p>
+        </a>
+       </li>
+      </ul>
+      <div class="d-flex align-items-center justify-content-between mt-5 mb-4 gap-2">
+        <div data-bs-dismiss="offcanvas" class="flex-grow-1 h-45 rounded-pill border-main-2 d-flex align-items-center justify-content-center font-bold fs-12 cursor-pointer">بستن منو</div>
+        <a href="login.html" class="flex-grow-1 h-45 rounded-pill text-white bg-main d-flex align-items-center justify-content-center font-bold fs-12 cursor-pointer">ورود به حساب کابری</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- search modal -->
+  <div class="modal fade show" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-848">
+      <div class="modal-content border-0">
+        <div class="modal-body p-0 mt-5">
+          <div class="d-flex align-items-center gap-3 px-3">
+            <form class="flex-grow-1">
+              <div class="d-flex align-items-center rounded-11 bg-gray ps-2 pe-sm-3 pe-2 border bg-white h-55 justify-content-between gap-2 shadow-10">
+                <input placeholder="جستجو کنید، هر آنچه نیازدارید ..." type="search"
+                  class="flex-grow-1 w-100 fs-sm-12 text-secondary bg-transparent border-0 outline-none py-2 fs-18 font-bold">
+                 <button class="w-52 w-sm-35 h-40 h-sm-31 rounded-5 bg-gray2 d-flex align-items-center justify-content-center border-0">
+                  <img alt="icon" src="assets/img/svg/Vector 1.svg" class="w-sm-17 h-sm-17">
+                 </button>
+              </div>
+            </form>
+             <div class="w-85 h-40 rounded-5 bg-gray2 fs-18 font-bold d-sm-flex d-none align-items-center justify-content-center cursor-pointer text-dark" data-bs-toggle="modal" data-bs-target="#search">
+              بستن
+            </div>
+          </div>
+          <div class="mt-2 row g-4 mx-0">
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-8 bg-white p-3 shadow-11 d-flex align-items-center justify-content-between gap-2">
+                <img alt="icon" src="assets/img/svg/Frame (2).svg" class="flex-shrink-0">
+                <p class="mb-0 text-secondary fs-sm-14 fw-bold">کارت ویزیت سلفون مات مخمل </p>
+                <div class="fs-18 font-bold bg-gray2 fs-sm-14 rounded-5 p-2 px-3 text-white cursor-pointer">انتخاب </div>
+              </div>
+            </div>
+          </div>
+          <div data-bs-toggle="modal" data-bs-target="#search" class="my-5 w-40 h-40 mx-auto bg-gray2 d-flex align-items-center justify-content-center d-sm-none cursor-pointer">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.6668 31.6668L8.3335 29.3335L17.6668 20.0002L8.3335 10.6668L10.6668 8.3335L20.0002 17.6668L29.3335 8.3335L31.6668 10.6668L22.3335 20.0002L31.6668 29.3335L29.3335 31.6668L20.0002 22.3335L10.6668 31.6668Z" fill="#5F6368"/>
+            </svg>
+          </div>
+          <div class="my-5 pt-4 d-sm-flex d-none align-items-center justify-content-center gap-2 paginationSection">
+            <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.01562 13.75L3.90625 12.6406L9.04688 7.5L3.90625 2.35938L5.01562 1.25L11.2656 7.5L5.01562 13.75Z" fill="#2A282B"/>
+                </svg>
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark rounded-5 border bg-white">
+              1
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark rounded-5 border bg-white">
+              2
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark rounded-5 border bg-white">
+              3
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark rounded-5 border bg-white">
+              4
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark rounded-5 border bg-white">
+              5
+             </a>
+             <a class="d-flex align-items-center justify-content-center w-32 h-32 text-dark">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.98437 1.25L11.0937 2.35938L5.95312 7.5L11.0937 12.6406L9.98438 13.75L3.73437 7.5L9.98437 1.25Z" fill="#2A282B"/>
+                </svg>
+             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- login modal -->
+    <div class="modal fade show" id="login" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered max-w-848">
+        <div class="modal-content border-0">
+          <div class="modal-body p-0">
+           <form class="max-w-100 mx-auto rounded-25 rounded-sm-0 bg-white my-sm-5 overflow-hidden shadow-4 shadow-sm-0 row gx-4">
+            <div class="col-sm-5 px-3 bg-main text-center">
+              <a class="d-block mt-sm-5 mt-4 pt-4 pt-sm-5"><img alt="logo" src="assets/img/Logo (2).png" class="d-block mx-auto w-78 h-38"></a>
+              <p class="text-white font-bold fs-20 mt-sm-5 mt-3 mb-1">خوش آمدید !</p>
+              <p class="fs-12 text-white text-center fw-bold pb-sm-5">
+                برای حفظ ارتباط با ما لطفا با<br> اطلاعات شخصی خود وارد شوید.
+              </p>
+               <a href="signup.html" class="w-128 h-38 fs-10 fw-bold text-dark shadow-6 mb-3 mb-sm-5 mt-0 mt-sm-5 mx-auto bg-white rounded-pill d-sm-flex d-none align-items-center justify-content-center">
+                ایجاد حساب کاربری
+               </a>
+            </div>
+            <div class="col-sm-7 px-3 order-last">
+              <h4 class="fs-20 font-bold text-secondary text-center mt-4 mt-sm-5 pt-4">فرم ورود به پروفایل </h4>
+              <div class="max-w-250 mx-auto mt-4 mt-sm-5">
+                <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                  <img alt="icon" src="assets/img/svg/Frame.svg" class="flex-shrink-0">
+                  <input placeholder="شماره موبایل " class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                </div>
+                <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                  <img alt="icon" src="assets/img/svg/lock.svg" class="flex-shrink-0">
+                  <input type="password" placeholder="رمز عبور" class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                </div>
+                <a href="" class="shadow-6 mx-auto mb-5 mt-4 d-flex align-items-center justify-content-center bg-main w-100 h-38 rounded-pill text-white font-bold fs-14">ورود به حساب کاربری</a>
+                <div class="d-flex align-items-center gap-2 mb-5">
+                 <a class="rounded-pill text-black-50 border-main flex-grow-1 h-38 d-flex align-items-center justify-content-center fs-9 fw-bold">بازیابی رمز عبور</a>
+                 <a href="login.html" class="rounded-pill text-black-50 border-main flex-grow-1 h-38 d-flex align-items-center justify-content-center fs-9 fw-bold">ورود به حساب کاربری</a>
+                </div>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- register modal -->
+    <div class="modal fade show" id="register" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered max-w-848">
+        <div class="modal-content border-0">
+          <div class="modal-body p-0">
+            <form class="max-w-100 mx-auto rounded-25 rounded-sm-0 bg-white my-sm-5 overflow-hidden shadow-4 shadow-sm-0 row gx-4">
+              <div class="col-sm-7 px-3 order-last order-sm-first">
+                <h4 class="fs-20 font-bold text-secondary text-center mt-4 mt-sm-5 pt-4">فرم ورود اطلاعات</h4>
+                <div class="max-w-250 mx-auto mt-4">
+                  <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                    <img alt="icon" src="assets/img/svg/icons.svg" class="flex-shrink-0">
+                    <input placeholder="نام" class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                  </div>
+                  <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                    <img alt="icon" src="assets/img/svg/icons.svg" class="flex-shrink-0">
+                    <input placeholder="نام خانوادگی " class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                  </div>
+                  <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                    <img alt="icon" src="assets/img/svg/Frame.svg" class="flex-shrink-0">
+                    <input placeholder="شماره موبایل " class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                  </div>
+                  <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                    <img alt="icon" src="assets/img/svg/lock.svg" class="flex-shrink-0">
+                    <input type="password" placeholder="رمز عبور" class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                  </div>
+                  <div class="rounded-4 mb-2 px-2 h-32 w-100 bg-gray3 d-flex align-items-center gap-2">
+                    <img alt="icon" src="assets/img/svg/lock.svg" class="flex-shrink-0">
+                    <input type="password" placeholder="تکرار رمز " class="flex-grow-1 fw-bold fs-10 w-100 border-0 outline-none bg-transparent">
+                  </div>
+                  <a href="signup.html" class="shadow-6 mx-auto my-4 d-flex align-items-center justify-content-center bg-main w-100 h-38 rounded-pill text-white font-bold fs-14">ایجاد حساب کاربری</a>
+                  <a href="login.html" class="rounded-pill text-black-50 border-main flex-grow-1 h-38 mb-5 d-sm-none d-flex align-items-center justify-content-center fs-9 fw-bold">ورود به حساب کاربری</a>
+                </div>
+              </div>
+              <div class="col-sm-5 px-3 bg-main text-center">
+                <a class="d-block mt-sm-5 mt-4 pt-4 pt-sm-5"><img alt="logo" src="assets/img/Logo (2).png" class="d-block mx-auto w-78 h-38"></a>
+                <p class="text-white font-bold fs-20 mt-sm-5 mt-3 mb-1">سلام دوست من!</p>
+                <p class="fs-12 text-white text-center fw-bold pb-sm-5">مشخصات شخصی خود را وارد کنید <br>
+                 و سفر را با ما آغاز کنید.</p>
+                 <a href="login.html" class="w-128 h-38 fs-10 fw-bold text-dark shadow-6 mb-3 mb-sm-5 mt-0 mt-sm-5 mx-auto bg-white rounded-pill d-sm-flex d-none align-items-center justify-content-center">
+                   ورود به حساب کاربری
+                 </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- succes alert -->
+    <div class="modal fade show" id="form">
+      <div class="modal-dialog modal-dialog-centered max-w-500">
+        <div class="modal-content rounded-15 bg-white pb-4">
+          <div class="modal-body bg-white rounded-30 text-center">
+             <img alt="icon" src="assets/img/svg/Frame (3).svg" class="d-block mx-auto my-4">
+             <h2 class="fs-30 fs-sm-20 font-bold">اطلاعات با موفقیت ثبت شد</h2>
+             <h4 class="fs-20 fs-sm-16 font-bold text-secondary">اطلاعات با موفقیت ثبت شد</h4>
+          </div>
+          <div data-bs-toggle="modal" data-bs-target="#form" class="w-40 h-40 mx-auto d-flex align-items-center justify-content-center cursor-pointer">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_544_638)">
+              <path d="M18 0C14.4399 0 10.9598 1.05568 7.99974 3.03355C5.03966 5.01141 2.73255 7.82263 1.37018 11.1117C0.00779915 14.4008 -0.348661 18.02 0.345873 21.5116C1.04041 25.0033 2.75474 28.2106 5.27209 30.7279C7.78943 33.2453 10.9967 34.9596 14.4884 35.6541C17.98 36.3487 21.5992 35.9922 24.8883 34.6298C28.1774 33.2675 30.9886 30.9604 32.9665 28.0003C34.9443 25.0402 36 21.5601 36 18C35.9949 13.2277 34.0969 8.65225 30.7223 5.27769C27.3478 1.90314 22.7723 0.00508237 18 0ZM18 31.5C15.33 31.5 12.7199 30.7082 10.4998 29.2248C8.27975 27.7414 6.54942 25.633 5.52763 23.1662C4.50585 20.6994 4.23851 17.985 4.75941 15.3663C5.28031 12.7475 6.56606 10.3421 8.45407 8.45406C10.3421 6.56605 12.7475 5.2803 15.3663 4.7594C17.985 4.2385 20.6994 4.50584 23.1662 5.52763C25.633 6.54941 27.7414 8.27974 29.2248 10.4998C30.7082 12.7199 31.5 15.33 31.5 18C31.4961 21.5792 30.0725 25.0107 27.5416 27.5416C25.0107 30.0725 21.5792 31.4961 18 31.5Z" fill="black"/>
+              <path d="M24.0911 11.9092C23.8822 11.7002 23.6342 11.5344 23.3613 11.4213C23.0883 11.3082 22.7958 11.25 22.5003 11.25C22.2048 11.25 21.9123 11.3082 21.6393 11.4213C21.3663 11.5344 21.1183 11.7002 20.9095 11.9092L18.0003 14.8183L15.0911 11.9092C14.6688 11.4892 14.0972 11.2538 13.5016 11.2546C12.906 11.2555 12.335 11.4924 11.9139 11.9136C11.4927 12.3347 11.2558 12.9057 11.2549 13.5013C11.2541 14.0969 11.4895 14.6685 11.9095 15.0908L14.8186 18L11.9095 20.9092C11.6996 21.1179 11.533 21.3659 11.4191 21.6391C11.3053 21.9123 11.2465 22.2053 11.2461 22.5013C11.2457 22.7973 11.3037 23.0904 11.4167 23.3639C11.5298 23.6374 11.6958 23.886 11.905 24.0953C12.1143 24.3045 12.3628 24.4705 12.6364 24.5835C12.9099 24.6966 13.203 24.7546 13.499 24.7542C13.795 24.7538 14.088 24.695 14.3612 24.5811C14.6344 24.4673 14.8824 24.3007 15.0911 24.0908L18.0003 21.1816L20.9095 24.0908C21.3318 24.5108 21.9034 24.7462 22.499 24.7453C23.0946 24.7445 23.6656 24.5075 24.0867 24.0864C24.5078 23.6653 24.7448 23.0943 24.7456 22.4987C24.7465 21.9031 24.5111 21.3315 24.0911 20.9092L21.1819 18L24.0911 15.0908C24.3001 14.8819 24.4659 14.6339 24.579 14.361C24.6921 14.088 24.7503 13.7955 24.7503 13.5C24.7503 13.2045 24.6921 12.912 24.579 12.639C24.4659 12.366 24.3001 12.118 24.0911 11.9092Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_544_638">
+              <rect width="36" height="36" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- header -->
+  
+    <header class="py-4">
+      <div class="d-flex align-items-center justify-content-between gap-2 position-relative">
+        <nav class="bg-body-tertiary w-100">
+          <div class="container">
+            <div class="d-flex align-items-center justify-content-between gap-4">
+              <div class="d-flex align-items-center gap-2 flex-grow-1">
+                <div class="flex-shrink-0 cursor-pointer w-47 h-47 rounded-circle border border-2 d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <img alt="icon" src="assets/img/Layer_1.png" class="w-16 h-16 d-block">
+                </div>
+                <div class="flex-shrink-0 cursor-pointer w-47 h-47 rounded-circle border border-2 d-flex d-lg-none align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#search">
+                  <img alt="icon" src="assets/img/XMLID_223_ (2).png" class="w-16 h-16 d-block">
+                </div>
+                <ul class="list-unstyled mb-0 d-lg-flex d-none align-items-center gap-2 gap-xxl-4 mt-4 mt-lg-0 bg-white bg-lg-transparent rounded-pill shadow-lg-none shadow-1 px-4 py-2">
+                  <li class="nav-item ms-2 d-none d-lg-block">
+                    <a class="d-block" href="#"><img alt="logo" src="assets/img/Logo.png" class="w-98 h-49"></a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" aria-current="page" href="#">صفحه اصلی</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" href="#">محصولات</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" href="#">لیست قیمت </a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2 active">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" href="#">طراحی</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" href="#">وبلاگ</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a class="nav-link text-dark mb-0 fw-bold p-0" href="#">درباره ما</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a data-bs-toggle="modal" data-bs-target="#register" class="nav-link text-dark mb-0 fw-bold p-0" href="signup.html">ثبت نام</a>
+                  </li>
+                  <li class="nav-item rounded-pill py-1 px-2">
+                    <a data-bs-toggle="modal" data-bs-target="#login" class="nav-link text-dark mb-0 fw-bold p-0" href="login.html">ورود</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex align-items-center gap-1 gap-xl-4">
+                <div class="flex-shrink-0 cursor-pointer w-61 h-61 rounded-circle border border-4 border-white bg-main d-none d-lg-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#search">
+                  <img alt="icon" src="assets/img/XMLID_223_.png" class="w-24 h-24 d-block">
+                </div>
+                <a data-bs-toggle="modal" data-bs-target="#login" href="login.html" class="flex-shrink-0 fs-sm-12 text-white fw-bold rounded-pill shadow-1 d-flex d-lg-none align-items-center justify-content-center gap-3 py-sm-3 py-2 px-sm-4 px-3 bg-main">
+                  <p class="mb-0">ثبت نام</p>
+                  <p class="mb-0">ورود</p>
+                 </a>
+                <a class="flex-shrink-0 text-main text-center bg-white shadow-1 rounded-pill py-2 px-3 d-none d-xl-block">
+                  <p class="font-bold mb-0">09121307032</p>
+                  <p class="fw-bold fs-14 mb-0">مشاوره  اختصاصی</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  <!-- main -->
+
+  <main>
+
+    <!-- banner -->
+     <section class="py-5 pt-3 pt-lg-5">
+       <div class="container">
+          <img alt="banner" src="assets/img/384.png" class="rounded-30 w-100 h-md-274 d-block">
+       </div>
+     </section>
+
+     <!-- form -->
+      <section class="bg-green-2 py-lg-5 py-2">
+        <div class="container py-4 pb-5">
+          <h2 class="fs-30 fs-sm-20 font-bold text-center">فرم ورود اطلاعات طراحی </h2>
+          <form class="mt-4 mx-0 g-sm-4 g-3 row fs-18 fw-bold">
+             <div class="col-lg-4">
+               <div class="rounded-15 bg-white p-3">
+                 <div class="position-relative rounded-15 border-dashed cursor-pointer">
+                  <input type="file" class="position-absolute w-100 h-100 end-0 top-0 start-0 bottom-0 cursor-pointer opacity-none">
+                   <img alt="icon" src="assets/img/svg/Group 205.svg" class="d-block mx-auto my-3">
+                   <p class="text-center fw-bold fs-14 text-secondary">بارگزاری لوگو / نمونه ایده</p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-8">
+              <textarea class="rounded-15 bg-white outline-none w-100 border-0 p-3 h-100 resize-none" placeholder="توضیحات روی  سفارش"></textarea>
+             </div>
+             <div class="col-12">
+              <textarea rows="4" class="rounded-15 bg-white outline-none w-100 border-0 p-3 h-100 resize-none" placeholder="توضیحات پشت  سفارش"></textarea>
+             </div>
+             <div class="col-12">
+              <textarea rows="3" class="rounded-15 bg-white outline-none w-100 border-0 p-3 h-100 resize-none" placeholder="توضیحات بیشتر"></textarea>
+             </div>
+             <div class="col-lg-4">
+              <div class="d-flex align-items-center gap-2 rounded-15 bg-white p-2 px-3">
+                <img alt="icon" src="assets/img/svg/icons (2).svg" class="flex-shrink-0">
+                <input placeholder="نام و نام خانوادگی" class="flex-grow-1 w-100 bg-white border-0 outline-none py-2">
+              </div>
+             </div>
+             <div class="col-lg-4">
+              <div class="d-flex align-items-center gap-2 rounded-15 bg-white p-2 px-3">
+                <img alt="icon" src="assets/img/svg/Vector (3).svg" class="flex-shrink-0">
+                <input placeholder="شمار تماس" class="flex-grow-1 w-100 bg-white border-0 outline-none py-2">
+              </div>
+             </div>
+             <div class="col-lg-3 me-auto">
+              <a data-bs-toggle="modal" data-bs-target="#form" class="bg-green-3 h-100 py-3 rounded-15 border-0 text-white fs-20 w-100 d-flex align-items-center justify-content-center">ثبت سفارش</a>
+             </div>
+          </form>
+        </div>
+      </section>
+
+    <!-- map -->
+    <section class="d-xl-none">
+        <div class="overflow-hidden h-223">
+          <iframe class="h-100 w-100"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-second">
+    <div class="container">
+      <div class="row mx-0 g-5 align-items-start py-4 border-3 border-bottom border-secondary">
+        <div class="col-xl-4 col-lg-6">
+          <a class="d-block border-bottom border-3 mb-4 border-secondary pb-4"><img alt="logo" src="assets/img/Group 75.png" class="img-fluid w-300"></a>
+          <h5 class="fw-bold fs-18 text-white pt-2">اطلاعات تماس</h5>
+          <div class="d-flex flex-wrap align-items-center fs-13 gap-3 fw-bold text-white mt-4">
+            <img alt="icon" src="assets/img/svg/Vector.svg">
+            <p class="mb-0">88 51 63 68</p>
+            <img alt="icon" src="assets/img/svg/_.svg">
+            <p class="mb-0">88 51 28 39</p>
+            <img alt="icon" src="assets/img/svg/_.svg">
+            <p class="mb-0">88 50 43 26</p>
+          </div>
+          <div class="d-flex align-items-center fs-13 gap-3 mt-3 fw-bold text-white">
+           <img alt="icon" src="assets/img/svg/Vector (2).svg">
+           <p class="mb-0">تهران، خیابان میر مطهری(پل سید خندان) پلاک82</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="d-flex align-items-center gap-2 mb-sm-5 mb-4 pb-sm-4">
+            <a class="d-flex align-items-center justify-content-center bg-main rounded-circle w-40 h-40">
+             <img alt="icon" src="assets/img/svg/SVGRepo_iconCarrier.svg">
+            </a>
+            <a class="d-flex align-items-center justify-content-center bg-main rounded-circle w-40 h-40">
+             <img alt="icon" src="assets/img/svg/Group.svg">
+            </a>
+            <a class="d-flex align-items-center justify-content-center bg-main rounded-circle w-40 h-40">
+             <img alt="icon" src="assets/img/svg/Group (2).svg">
+            </a>
+            <a class="d-flex align-items-center justify-content-center bg-main rounded-circle w-40 h-40">
+             <img alt="icon" src="assets/img/svg/Group 1.svg">
+            </a>
+            <a class="d-flex align-items-center justify-content-center bg-main rounded-circle w-40 h-40">
+             <img alt="icon" src="assets/img/svg/Group (3).svg">
+            </a>
+          </div>
+          <h5 class="fw-bold fs-18 text-white">دستــــرسی هـــای سـریع</h5>
+          <div class="row gx-4 mt-4 fs-13">
+            <div class="col-sm-6 pe-0">
+              <ul class="pe-0 list-unstyled fw-bold mb-0">
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">صفحه اصلی</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">تماس با ما</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">مقالات</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">اخبار</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 pe-0">
+              <ul class="pe-0 list-unstyled fw-bold mb-0">
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">درباره ما</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">محصولات</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">سوالات متداول</p>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="d-flex align-items-center gap-2 text-white">
+                   <div class="w-4 h-4 rounded-circle bg-main"></div>
+                   <p class="mb-0">نمونه کار</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-xl-flex align-items-center justify-content-between gap-2">
+           <img alt="img" src="assets/img/21796_aed6b575a2eb325c176a53149.png" class="d-block w-106 h-106">
+           <div>
+             <div class="rounded-10 overflow-hidden w-251 h-223">
+              <iframe class="rounded-10 h-100 w-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+              <form class="mt-3 d-flex align-items-center rounded-pill bg-gray ps-1 pe-4 h-38 w-251 justify-content-between gap-2">
+                <input placeholder="جستجو کنید ..." type="search" class="flex-grow-1 bg-transparent border-0 outline-none py-2 fs-10 font-bold">
+                 <button class="w-32 h-32 rounded-circle bg-main d-flex align-items-center justify-content-center border-0">
+                  <img alt="icon" src="assets/img/svg/XMLID_223_.svg">
+                 </button>
+              </form>
+           </div>
+        </div>
+      </div>
+      <div class="text-white text-center fw-bold py-4">کلیه حقوق این سایت متعلق به <a class="text-main">مجموعه چاپ مهرآوه</a> می باشد.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
