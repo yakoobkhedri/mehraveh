@@ -167,10 +167,12 @@ a {
     max-width: 250px;
     width: 100%;
 }
+/* request form */
 .max-w-500{
     max-width: 500px;
     width: 100%;
 }
+/*  */
 .max-w-748{
     max-width: 748px;
     width: 100%;
@@ -306,9 +308,11 @@ a {
 .rounded-11{
     border-radius: 11px!important;
 }
+/* request form */
 .rounded-15{
     border-radius: 15px;
 }
+/*  */
 .rounded-18{
     border-radius: 18px;
 }
@@ -652,11 +656,11 @@ a {
 .visible-none {
     visibility: hidden;
 }
-
+/* request form */
 .resize-none {
     resize: none;
 }
-
+/*  */
 .cursor-pointer {
     cursor: pointer;
 }
@@ -916,9 +920,11 @@ header nav ul li:hover a,header nav ul li.active a{
     .h-md-230{
         height: 230px;
     }
+    /* request form */
     .h-md-274{
         height: 274px;
     }
+    /*  */
     .w-md-103{
         width: 103px;
     }
