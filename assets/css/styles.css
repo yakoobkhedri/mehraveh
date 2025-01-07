@@ -51,6 +51,9 @@ a {
 .text-black {
     color: #000000;
 }
+.text-gray{
+    color: #404548;
+}
 /* z index */
 .z-20{
     z-index: 20;
@@ -91,6 +94,9 @@ a {
 }
 .bg-gray4{
     background-color: #f5f5f7;
+}
+.bg-gray5{
+    background-color: #D9D9D980;
 }
 /* tab */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -284,6 +290,10 @@ a {
 }
 .-right-77{
     right: -77px;
+}
+/* line height */
+.lh-40{
+    line-height: 40px;
 }
 /* line-clamp */
 .line-clamp-3 {
@@ -714,6 +724,11 @@ input[type="number"] {
 }
 .swiper-pagination-bullet-active{
     background-color: #EF4B4B;
+}
+/* checkbox */
+.form-check-input:checked{
+    background-color: #0DC167;
+  border-color: #0DC167;
 }
 /* pagination */
 .paginationSection a:hover,.paginationSection a.active{
