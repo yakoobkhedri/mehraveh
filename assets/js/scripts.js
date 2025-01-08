@@ -95,3 +95,22 @@ var relatedBlog = new Swiper(".relatedBlog", {
     },
   }
 });
+
+// radio input
+
+let radioBtn = Array.from(document.getElementsByClassName('radioBtn'));
+let radioBtn2 = Array.from(document.getElementsByClassName('radioBtn2'));
+
+radioBtn.forEach((item)=>{
+  item.addEventListener('click', function () {
+    radioBtn.forEach((items)=>{items.classList.remove('active');})
+    item.classList.add('active');
+  })
+})
+
+radioBtn2.forEach((item)=>{
+  item.addEventListener('click', function () {
+    radioBtn2.forEach((items)=>{items.classList.remove('active');})
+    item.classList.add('active');
+  })
+})
